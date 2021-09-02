@@ -51,3 +51,7 @@ export interface Cocktail {
     strCreativeCommonsConfirmed: string;
     dateModified: string;
 }
+
+export interface drinks{
+    drinks: Cocktail[];
+}
