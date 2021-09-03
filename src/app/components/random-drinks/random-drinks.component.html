@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="random-drinks">
+        <h1>Grab your poison</h1>
+        <div class="card-deck">
+            <div class="card" *ngFor="let cocktail of cocktailsArrays">
+                <img class="card-img-top" src="{{ cocktail.strDrinkThumb }} " alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{ cocktail.strDrink }}</h5>
+                    <p class="card-text"><small class="text-muted">Modified: {{ cocktail.dateModified }}</small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
