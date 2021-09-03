@@ -3,6 +3,8 @@ import { HttpClient } from '@angular/common/http'
 import { environment } from 'src/environments/environment';
 import { Cocktail } from '../models/coctail';
 import { forkJoin, Observable } from 'rxjs';
+import { AngularFirestore } from '@angular/fire/firestore';
+
 
 const urlOrigin = new Array(5).fill(0);
 
@@ -13,7 +15,10 @@ export class CocktailServiceService {
   private _coctails: Cocktail [] = [];
   private baseUrl = `${environment.baseURL}/random.php`;
 
-  constructor(private http: HttpClient,) { }
+  constructor(
+    private http: HttpClient,
+    private db: AngularFirestore,
+  ) {}
   
   getRandomCocktails(): Observable<any[]> {
     const expectedURLS = urlOrigin.fill(this.http.get<Cocktail[]>(this.baseUrl), 0, 5)
