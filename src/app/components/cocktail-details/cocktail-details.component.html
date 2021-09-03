@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card-group">
+                <div class="card">
+                    <img class="card-img-top" src="{{ coctailDetails.strDrinkThumb }} " alt="Coctail Image">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ coctailDetails.strDrink }} </h5>
+                        <p class="card-text">Type: {{ coctailDetails.strAlcoholic }}</p>
+                        <p class="card-text"><small class="text-muted">Date Modified: {{
+                                coctailDetails.strIngredient3}}</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="card text-center">
+                <div class="card-header">
+                    <ul class="nav nav-pills card-header-pills">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Ingredients</a>
+                            <p class="card-text">{{ coctailDetails.strIngredient1 }}</p>
+                            <p class="card-text">{{ coctailDetails.strIngredient2 }}</p>
+                            <p class="card-text">{{ coctailDetails.strIngredient3 }}</p>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link ">Intructions</a>
+                            <p class="card-text">{{ coctailDetails.strInstructions }}</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

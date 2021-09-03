@@ -1,14 +1,41 @@
-<div class="container">
-    <div class="random-drinks">
-        <h1>Grab your poison</h1>
-        <div class="card-deck">
+<h1>Grab your poison</h1>
+<!-- five random drink starts -->
+<div class="row">
+    <div class="col-md-9">
+        <div class="card-columns" *ngIf="cocktailsArrays.length > 0; else loader">
             <div class="card" *ngFor="let cocktail of cocktailsArrays">
-                <img class="card-img-top" src="{{ cocktail.strDrinkThumb }} " alt="Card image cap">
+                <img class="card-img-top" src="{{ cocktail.strDrinkThumb }}" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">{{ cocktail.strDrink }}</h5>
                     <p class="card-text"><small class="text-muted">Modified: {{ cocktail.dateModified }}</small></p>
+                    <a [routerLink]="['/cocktail-details/',cocktail.idDrink]" class="btn btn-primary btn-sm">
+                        Details
+                    </a>
                 </div>
             </div>
         </div>
+        <ng-template #loader>please wait loading drinks...</ng-template>
     </div>
+    <!-- five random drink ends -->
+
+    <!-- fetch random drink starts-->
+    <div class="col-md-3">
+        <div class="card-columns">
+
+            <div class="card" *ngIf="(randomCocktail | json) != '{}'; else loader">
+                <img class="card-img-top" src="{{ randomCocktail.strDrinkThumb }}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{ randomCocktail.strDrink }}</h5>
+                    <p class="card-text"><small class="text-muted">Modified: {{ randomCocktail.dateModified }}</small>
+                    </p>
+                    <a [routerLink]="['/cocktail-details/',randomCocktail.idDrink]" class="btn btn-primary btn-sm">
+                        Details
+                    </a>
+                </div>
+            </div>
+            <ng-template #loader>please wait your drinks...</ng-template>
+        </div>
+        <button class="btn btn-primary btn-sm" (click)="getRandomCocktail()">Get Random</button>
+    </div>
+    <!-- fetch random drink ends-->
 </div>
