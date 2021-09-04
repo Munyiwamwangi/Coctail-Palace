@@ -55,8 +55,9 @@ export class CocktailServiceService {
     return coctailCollection.valueChanges();
   }
 
-  searchCustomCoctails(start:string, end:string) {
-    this.db.collection("coctails", ref => ref.orderBy('strDrink').startAt(start).endAt(end))
+  searchCustomCoctails(start: any, end: any):Observable<any[]> {
+
+    return this.db.collection("coctails", ref => ref.orderBy("strDrink").startAt(start).endAt(end)).valueChanges()
 
   }
 }

@@ -1,3 +1,7 @@
+
+<div>
+    <input name="search" (keydown)="search($event)" type="text"  [(ngModel)]="searchField"/>
+
 <div class="">
     <div class="card-columns" *ngIf="cocktailsArrays.length > 0; else loader">
         <div class="card" *ngFor="let cocktail of cocktailsArrays">
