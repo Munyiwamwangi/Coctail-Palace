@@ -22,7 +22,8 @@ const appRoutes: Routes = [
   { path: 'display-local', component: DisplayCustomComponent},
   {path:"custom-drink", component: CustomDrinkComponent},
   { path: 'cocktail-details/:idDrink', component: CocktailDetailsComponent },
-  { path: '', redirectTo: '/coctails', pathMatch:'full'},
+  { path: '', redirectTo: '/coctails', pathMatch: 'full' },
+  {path:"*", component: RandomDrinksComponent}
   
 ]
 
