@@ -55,8 +55,8 @@ export class CocktailServiceService {
     return coctailCollection.valueChanges();
   }
 
-  // searchCustomCoctails() {
-  //   const coctailCollection = this.db.collection("coctails", ref => ref.orde)
+  searchCustomCoctails(start:string, end:string) {
+    this.db.collection("coctails", ref => ref.orderBy('strDrink').startAt(start).endAt(end))
 
-  // }
+  }
 }
