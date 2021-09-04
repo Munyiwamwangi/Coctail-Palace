@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http'
 import { environment } from 'src/environments/environment';
 import { Cocktail } from '../models/coctail';
 import { forkJoin, Observable } from 'rxjs';
-import { AngularFirestore } from '@angular/fire/firestore';
+import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 
 
 const urlOrigin = new Array(5).fill(0);
@@ -49,4 +49,14 @@ export class CocktailServiceService {
     const coctailCollection = this.db.collection("coctails")
     return coctailCollection.add(coctail)
   }
+
+  getCustomCoctails(): Observable<any[]> {
+    const coctailCollection = this.db.collection("coctails", ref => ref.orderBy('dateModified','desc').limit(5))
+    return coctailCollection.valueChanges();
+  }
+
+  // searchCustomCoctails() {
+  //   const coctailCollection = this.db.collection("coctails", ref => ref.orde)
+
+  // }
 }

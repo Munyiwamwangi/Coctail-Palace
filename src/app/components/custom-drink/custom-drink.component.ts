@@ -3,6 +3,7 @@ import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CocktailServiceService } from 'src/app/services/cocktail-service.service';
 import { CocktailDetailsComponent } from '../cocktail-details/cocktail-details.component';
+import { firestore } from 'firebase'
 
 @Component({
   selector: 'app-custom-drink',
@@ -11,16 +12,16 @@ import { CocktailDetailsComponent } from '../cocktail-details/cocktail-details.c
 })
 export class CustomDrinkComponent implements OnInit {
     coctail = {
-    strDrink: "",
-    strCategory: "",
-    strAlcoholic: "",
-    strInstructions: "",
-    strIngredient1:"",
-    strIngredient2:"",
-    strMeasure1:"",
-    strMeasure2:"",
-    strImageSource: "",
-    dateModified: new Date().toISOString()
+      strDrink: "",
+      strCategory: "",
+      strAlcoholic: "",
+      strInstructions: "",
+      strIngredient1:"",
+      strIngredient2:"",
+      strMeasure1:"",
+      strMeasure2:"",
+      strImageSource: "",
+      dateModified: firestore.FieldValue.serverTimestamp(),
   
   }
 
@@ -41,7 +42,7 @@ export class CustomDrinkComponent implements OnInit {
 
     this.coctailService.createCustomCoctail(this.coctail)
     coctailForm.reset()
-    this.router.navigate(["coctails"])
+    this.router.navigate(["display-local"])
   }
 
 

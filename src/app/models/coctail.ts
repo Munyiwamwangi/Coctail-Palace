@@ -49,7 +49,7 @@ export interface Cocktail {
     strImageSource: string;
     strImageAttribution: null| string;
     strCreativeCommonsConfirmed: string;
-    dateModified: string;
+    dateModified: string | any;
 }
 
 

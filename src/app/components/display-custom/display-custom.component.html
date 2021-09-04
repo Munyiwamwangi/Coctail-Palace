@@ -1,0 +1,14 @@
+<div class="">
+    <div class="card-columns" *ngIf="cocktailsArrays.length > 0; else loader">
+        <div class="card" *ngFor="let cocktail of cocktailsArrays">
+            <img class="card-img-top" src="{{ cocktail.strImageSource }}" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{ cocktail.strDrink }}</h5>
+                <a [routerLink]="['/cocktail-details/',cocktail.idDrink]" class="btn btn-primary btn-sm">
+                    Details
+                </a>
+            </div>
+        </div>
+    </div>
+    <ng-template #loader>please wait loading drinks...</ng-template>
+</div>

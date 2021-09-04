@@ -14,10 +14,12 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { CustomDrinkComponent } from './components/custom-drink/custom-drink.component';
 import { FormsModule } from '@angular/forms';
+import { DisplayCustomComponent } from './components/display-custom/display-custom.component';
 
 
 const appRoutes: Routes = [
   { path: 'coctails', component: RandomDrinksComponent },
+  { path: 'display-local', component: DisplayCustomComponent},
   {path:"custom-drink", component: CustomDrinkComponent},
   { path: 'cocktail-details/:idDrink', component: CocktailDetailsComponent },
   { path: '', redirectTo: '/coctails', pathMatch:'full'},
@@ -30,6 +32,7 @@ const appRoutes: Routes = [
     RandomDrinksComponent,
     CocktailDetailsComponent,
     CustomDrinkComponent,
+    DisplayCustomComponent,
   ],
   imports: [
     RouterModule.forRoot(
