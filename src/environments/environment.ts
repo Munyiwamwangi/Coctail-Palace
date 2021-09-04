@@ -10,17 +10,17 @@ export const environment = {
 
   firebaseConfig : {
 
-    apiKey:process.env.apiKey,
+    apiKey: "AIzaSyCNvUMxHPTAx6GMHBUeqH39JK5WmTTcnRE",
 
-    authDomain:process.env.authDomain,
+    authDomain: "coctail-palace.firebaseapp.com",
 
-    projectId:process.env.projectId,
+    projectId: "coctail-palace",
 
-    storageBucket:process.env.storageBucket,
+    storageBucket: "coctail-palace.appspot.com",
 
-    messagingSenderId:process.env.messagingSenderId,
+    messagingSenderId: "1032635802278",
 
-    appId:process.env.appId
+    appId: "1:1032635802278:web:22597017101d57f3ae8a67"
 
   }
 
