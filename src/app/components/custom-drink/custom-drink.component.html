@@ -1,0 +1,43 @@
+<form (ngSubmit)="submitCoctail(coctailForm)" #coctailForm='ngForm' class="mb-3">
+    <div class="form-group">
+        <label for="strDrinkf">Coctail Name</label>
+        <input type="text" required placeholder="Enter Name of coctail..." class="form-control" name="strDrink"
+            #strDrinkf='ngModel' [(ngModel)]="coctail.strDrink">
+    </div>
+    <div class="form-group">
+        <label for="strCategoryf">Category</label>
+        <input type="text" required placeholder="E.g Alcoholic..." class="form-control" name="strCategory"
+            #strCategoryf='ngModel' [(ngModel)]="coctail.strCategory">
+    </div>
+    <div class="form-group">
+        <label for="strInstructionsf">Instructions</label>
+        <input type="text" required placeholder="Enter calories..." class="form-control" name="strCategory"
+        #strInstructionsf='ngModel' [(ngModel)]="coctail.strInstructions">
+    </div>
+    <div class="form-group">
+        <label for="strIngredient1f">Ingredient 1</label>
+        <input type="text" required placeholder="Enter ingredient..." class="form-control" name="strIngredient1"
+        #strIngredient1f='ngModel' [(ngModel)]="coctail.strIngredient1">
+    </div>
+    <div class="form-group">
+        <label for="strIngredient2f">Ingredient 2</label>
+        <input type="text" required placeholder="Enter ingredient..." class="form-control" name="strIngredient2"
+        #strIngredient2f='ngModel' [(ngModel)]="coctail.strIngredient2">
+    </div>
+    <div class="form-group">
+        <label for="strMeasure1f">Measurement for ingredient 1</label>
+        <input type="text" required placeholder="E.g 10ml..." class="form-control" name="strMeasure1"
+        #strMeasure1f='ngModel' [(ngModel)]="coctail.strMeasure1">
+    </div>
+    <div class="form-group">
+        <label for="strMeasure2f">Measurement for ingredient 2</label>
+        <input type="text" required placeholder="E.g 10ml..." class="form-control" name="strMeasure2"
+        #strMeasure2f='ngModel' [(ngModel)]="coctail.strMeasure2">
+    </div>
+    <div class="form-group">
+        <label for="strImageSourcef"> Enter image URL</label>
+        <input type="text" required placeholder="Image URL..." class="form-control" name="strImageSource"
+            #strImageSourcef='ngModel' [(ngModel)]="coctail.strImageSource">
+    </div>
+    <button class="btn-primary btn btn-block" type="submit">Create Coctail</button>
+</form>

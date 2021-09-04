@@ -12,10 +12,13 @@ import { environment } from '../environments/environment';
 // firebase 
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { CustomDrinkComponent } from './components/custom-drink/custom-drink.component';
+import { FormsModule } from '@angular/forms';
 
 
 const appRoutes: Routes = [
   { path: 'coctails', component: RandomDrinksComponent },
+  {path:"custom-drink", component: CustomDrinkComponent},
   { path: 'cocktail-details/:idDrink', component: CocktailDetailsComponent },
   { path: '', redirectTo: '/coctails', pathMatch:'full'},
   
@@ -26,6 +29,7 @@ const appRoutes: Routes = [
     AppComponent,
     RandomDrinksComponent,
     CocktailDetailsComponent,
+    CustomDrinkComponent,
   ],
   imports: [
     RouterModule.forRoot(
@@ -37,6 +41,7 @@ const appRoutes: Routes = [
     AngularFirestoreModule, // firestore
     BrowserModule,
     HttpClientModule,
+    FormsModule,
 
   ],
   providers: [],

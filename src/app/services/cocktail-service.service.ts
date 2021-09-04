@@ -44,4 +44,9 @@ export class CocktailServiceService {
       )
     } as Cocktail
   }
+
+  createCustomCoctail(coctail: Partial<Cocktail>) {
+    const coctailCollection = this.db.collection("coctails")
+    return coctailCollection.add(coctail)
+  }
 }
