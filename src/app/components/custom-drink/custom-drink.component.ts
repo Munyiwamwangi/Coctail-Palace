@@ -3,7 +3,7 @@ import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CocktailServiceService } from 'src/app/services/cocktail-service.service';
 import { CocktailDetailsComponent } from '../cocktail-details/cocktail-details.component';
-import firebase from 'firebase'
+
 
 @Component({
   selector: 'app-custom-drink',
@@ -21,7 +21,7 @@ export class CustomDrinkComponent implements OnInit {
       strMeasure1:"",
       strMeasure2:"",
       strImageSource: "",
-      dateModified: firebase.firestore.FieldValue.serverTimestamp(),
+      dateModified: new Date().getMilliseconds(),
   
   }
 
