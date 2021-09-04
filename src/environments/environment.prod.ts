@@ -1,6 +1,6 @@
 export const environment = {
   production: false,
-  baseURL: "http://www.thecocktaildb.com/api/json/v1/1",
+  baseURL: "https://www.thecocktaildb.com/api/json/v1/1",
 
   // Your web app's Firebase configuration
 
