@@ -1,0 +1,40 @@
+body {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+.nav-item{
+  padding-left: 3em;
+}
+  .rotate{
+   width:80px;
+   color: rgb(39, 30, 30);
+   height:80px;
+   animation: rotation infinite 7s linear;
+   padding-right: 15rem;
+}
+
+@keyframes rotation{
+  from{
+    transform:rotate(0deg);
+  }
+
+  to{
+    transform:rotate(360deg);
+  }
+}
+
+body > header>nav{
+    background-color: rgb(22, 88, 114) ;
+    
+
+}
+ body>main>.container#carouselExampleIndicators{
+   transition:all 0.5s ease-in-out;
+   background: rgb(137, 143, 31);
+ }
+
+.box:hover {
+  background-color: rgb(75, 74, 30);
+  cursor: pointer;
+  
+}

@@ -1,0 +1,17 @@
+.jumbotron {
+    box-shadow: inset 0 0 0 100vw rgba(0,0,0,0.1);
+    /* height: 40vh; */
+    height: 30vh;
+    background-size: cover;
+  }
+
+   .jumbotron-other{
+    background: url("../../../assets/images/oldfashioned.jpg ") no-repeat fixed;
+
+ }
+ 
+   .jumbotron{
+      box-shadow: inset 0 0 0 100vw rgba(0,0,0,0.1);
+      height: 40vh;
+      background-size: cover;
+   }

@@ -1,4 +1,9 @@
-<h1>Grab your poison</h1>
+<div class="jumbotron jumbotron-other container-fluid">
+    <div class="container">
+        <h1 class="display-3 text-white">Grab a Drink</h1>
+    </div>
+</div>
+
 <!-- five random drink starts -->
 <div class="row">
     <div class="col-md-8">
@@ -7,35 +12,60 @@
                 <img class="card-img-top" src="{{ cocktail.strDrinkThumb }}" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">{{ cocktail.strDrink }}</h5>
-                    <p class="card-text"><small class="text-muted">Modified: {{ cocktail.dateModified }}</small></p>
+                    <p class="card-text"><small class="text-muted">Modified: {{ cocktail.dateModified }}
+                    </small></p>
                     <a [routerLink]="['/cocktail-details/',cocktail.idDrink]" class="btn btn-primary btn-sm">
                         Details
                     </a>
                 </div>
             </div>
         </div>
-        <ng-template #loader>please wait loading drinks...</ng-template>
+        <ng-template #loader> <br>
+             <abbr title="">loading cocktail</abbr>
+            </ng-template>
     </div>
     <!-- five random drink ends -->
 
     <!-- fetch random drink starts-->
-    <div class="col-md-4">
-        <div class="card-columns">
-
+    <div class="col-md-3">
+        <div class="container-fluid">
+            <button class="badge-info btn-sm " (click)="getRandomCocktail()">Sample a Random Coctail</button>
             <div class="card" *ngIf="(randomCocktail | json) != '{}'; else loader">
-                <img class="card-img-top img-fluid" src="{{ randomCocktail.strDrinkThumb }}" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">{{ randomCocktail.strDrink }}</h5>
-                    <p class="card-text"><small class="text-muted">Modified: {{ randomCocktail.dateModified }}</small>
-                    </p>
-                    <a [routerLink]="['/cocktail-details/',randomCocktail.idDrink]" class="btn btn-primary btn-sm">
-                        Details
+                <!-- start carousel -->
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="card-img-top img-fluid" src="{{ randomCocktail.strDrinkThumb }}"
+                                alt="Card image cap">
+                            <div>
+                                <h5 class="card-title">{{ randomCocktail.strDrink }}</h5>
+                                <p class="card-text"><small class="text-muted">Modified: {{ randomCocktail.dateModified
+                                        }}</small>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" (click)="getRandomCocktail()" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" (click)="getRandomCocktail()" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
                     </a>
                 </div>
+                <ng-template #loader> 
+                    <abbr>
+                        please wait loading drinks... 
+                    </abbr>
+                 </ng-template>
+
+                <!-- end carousel  -->
             </div>
-            <ng-template #loader>please wait or click the button...</ng-template>
         </div>
-        <button class="btn btn-primary btn-sm" (click)="getRandomCocktail()">Get Random Coctail</button>
+        <!-- fetch random drink ends-->
     </div>
-    <!-- fetch random drink ends-->
 </div>
