@@ -23,6 +23,7 @@
     "expres": "^0.0.5",
     "firebase": "^7.24.0",
     "install": "^0.13.0",
+    "jquery": "^3.4.1",
     "magic-grid": "^3.2.4",
     "path": "^0.12.7",
     "popper": "^1.0.1",
