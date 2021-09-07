@@ -3,6 +3,9 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.3.
 ## [View Cite](https://munyiwamwangi.github.io/Coctail-Palace/coctails)
 
+## Random Cocktails Page Sample
+![Random Cocktails](https://github.com/Munyiwamwangi/Coctail-Palace/blob/main/src/assets/images/newhome.png)
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
