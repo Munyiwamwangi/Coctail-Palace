@@ -3,6 +3,9 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.3.
 ## [View Cite](https://munyiwamwangi.github.io/Coctail-Palace/coctails)
 
+## Local Cocktails Page Sample
+![Local Cocktails Page](https://github.com/Munyiwamwangi/Coctail-Palace/blob/main/src/assets/images/localcocktails.png)
+
 ## Random Cocktails Page Sample
 ![Random Cocktails](https://github.com/Munyiwamwangi/Coctail-Palace/blob/main/src/assets/images/newhome.png)
 

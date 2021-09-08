@@ -1,33 +1,25 @@
-<div class="container">
-    <div class="row">
-        <div class="col-md-4">
-            <div class="card-group">
-                <div class="card">
-                    <img class="card-img-top" src="{{ coctailDetails.strDrinkThumb }} " alt="Coctail Image">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ coctailDetails.strDrink }} </h5>
-                        <p class="card-text">Type: {{ coctailDetails.strAlcoholic }}</p>
-                        <p class="card-text"><small class="text-muted">Date Modified: {{
-                                coctailDetails.strIngredient3}}</small></p>
-                    </div>
+<div class="p-2 mt-4 pt-md-4 mx-auto text-center">
+    <h2 class="h-2"> {{coctailDetails.strDrink}}; cocktail details </h2>
+</div>
+<div class="container ">
+    <div no-gutters class="row">
+        <div class="card mb-3">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <img src="{{ coctailDetails.strDrinkThumb }} " alt="Coctail Image" class="card-img">
                 </div>
-            </div>
-        </div>
-        <div class="col-md-8">
-            <div class="card text-center">
-                <div class="card-header">
-                    <ul class="nav nav-pills card-header-pills">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#">Ingredients</a>
-                            <p class="card-text">{{ coctailDetails.strIngredient1 }}</p>
-                            <p class="card-text">{{ coctailDetails.strIngredient2 }}</p>
-                            <p class="card-text">{{ coctailDetails.strIngredient3 }}</p>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link ">Intructions</a>
+                <div class="col-md-8">
+                   <div>
+                        <div class="card-body">
+                            <h5 class="card-title">Ingredients</h5>
+                              <p class="card-text text-muted">{{ coctailDetails.strIngredient1 }}</p>
+                                <p class="card-text text-muted">{{ coctailDetails.strIngredient2 }}</p>
+                                <hr>
+                                <h5 class="card-title">Instructions</h5>
                             <p class="card-text">{{ coctailDetails.strInstructions }}</p>
-                        </li>
-                    </ul>
+                              
+                        </div>
+                   </div>
                 </div>
             </div>
         </div>

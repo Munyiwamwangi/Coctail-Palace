@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable, Subject } from 'rxjs';
-import { Cocktail, drinks } from 'src/app/models/coctail';
+import { Cocktail } from 'src/app/models/coctail';
 import { CocktailServiceService } from 'src/app/services/cocktail-service.service';
 
 

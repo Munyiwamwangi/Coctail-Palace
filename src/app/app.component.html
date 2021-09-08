@@ -4,9 +4,9 @@
   <header>
     <nav class="navbar navbar-expand-md navbar-expand-sm navbar-dark fixed-top">
       <div class="container">
-        <span class="rotate">
+        <span >
           <a [routerLink]="['/coctails']" class="navbar-brand">
-            <img src="../assets/images/brandlogo.PNG" width="30" height="30" class="d-inline-block align-top"
+            <img src="../assets/images/oldfashioned.jpg" width="50" height="30" class="d-inline-block align-top"
               alt="brand logo">
             <span class="display-5">
               Cocktail Palace
@@ -14,14 +14,15 @@
           </a>
         </span>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link" [routerLink]="['/coctails']">Home </a>
+              <a class="nav-link active" [routerLink]="['/coctails']">Home </a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
