@@ -1,5 +1,5 @@
 <div class="p-2 mt-4 pt-md-4 mx-auto text-center">
-    <h2 class="h-2"> {{coctailDetails.strDrink}}; cocktail details </h2>
+    <h2 class="h-2"><span class="turn-teal">{{coctailDetails.strDrink}};</span> cocktail details </h2>
 </div>
 <div class="container ">
     <div no-gutters class="row">
@@ -9,17 +9,17 @@
                     <img src="{{ coctailDetails.strDrinkThumb }} " alt="Coctail Image" class="card-img">
                 </div>
                 <div class="col-md-8">
-                   <div>
+                    <div>
                         <div class="card-body">
                             <h5 class="card-title">Ingredients</h5>
-                              <p class="card-text text-muted">{{ coctailDetails.strIngredient1 }}</p>
-                                <p class="card-text text-muted">{{ coctailDetails.strIngredient2 }}</p>
-                                <hr>
-                                <h5 class="card-title">Instructions</h5>
+                            <p class="card-text text-muted">{{ coctailDetails.strIngredient1 }}</p>
+                            <p class="card-text text-muted">{{ coctailDetails.strIngredient2 }}</p>
+                            <hr>
+                            <h5 class="card-title">Instructions</h5>
                             <p class="card-text">{{ coctailDetails.strInstructions }}</p>
-                              
+
                         </div>
-                   </div>
+                    </div>
                 </div>
             </div>
         </div>
